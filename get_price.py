@@ -3,7 +3,7 @@ import requests
 
 def get_price(limit, num_of_requests):  # количество часовых свечей в одном запросе и количество запросов
 
-    # time = response.json().get('Data')[0].get('time')
+    time = response.json().get('Data')[0].get('time')
 
     for req in range((num_of_requests) + 1):
         if req == 1:
