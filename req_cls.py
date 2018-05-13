@@ -34,11 +34,6 @@ class RequestPrice:
         return final_res
 
 
-x = RequestPrice(2, 2)
-print(len(x.final_response))
-print(x.first_req())
-
-
 
 
 
