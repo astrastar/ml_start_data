@@ -11,6 +11,9 @@ class RequestPrice:
         self.limit = limit - 1
         self.num_request = num_request
 
+    def __getitem__(self, item):
+        return self.final_response[item]
+
     def first_req(self):
         local_url = f'{self.url1}{self.limit}'
         response = requests.get(local_url)
