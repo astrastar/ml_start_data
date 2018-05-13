@@ -1,5 +1,6 @@
 import requests
 
+
 class RequestPrice:
     """
     Limit - number of candels in response, num_request - number of request with given limit
@@ -33,10 +34,6 @@ class RequestPrice:
         final_res.extend(self.other_req())
         return final_res
 
-
-x = RequestPrice(2, 2)
-print(len(x.final_response))
-print(x.first_req())
 
 
 
