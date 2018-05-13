@@ -1,13 +1,13 @@
 import MySQLdb
-# from ML_start import get_price
+import req_cls
 
 
 conn = MySQLdb.connect('localhost', 'root', '123456', 'btc_hour')
 cursor = conn.cursor()
 
-array = get_price.get_price(2000)
+array = req_cls.RequestPrice(10, 2)
 
-for i in range(len(array)):
+for i in range(len(array.final_response)):
     price = array[i]
     time = price.get('time')
     close = price.get('close')
@@ -25,4 +25,3 @@ for i in range(len(array)):
     conn.autocommit('on')
 
 
-print()
