@@ -1,5 +1,6 @@
 import MySQLdb
-from ML_start import get_price
+# from ML_start import get_price
+
 
 conn = MySQLdb.connect('localhost', 'root', '123456', 'btc_hour')
 cursor = conn.cursor()
@@ -24,3 +25,4 @@ for i in range(len(array)):
     conn.autocommit('on')
 
 
+print()
